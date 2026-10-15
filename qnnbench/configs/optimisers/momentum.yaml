@@ -1,0 +1,4 @@
+optimiser:
+  name: momentum
+  lr: 0.1
+  momentum: 0.9

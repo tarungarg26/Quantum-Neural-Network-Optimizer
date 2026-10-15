@@ -1,0 +1,39 @@
+# =============================================================================
+# qnnbench — .gitignore
+# =============================================================================
+
+# Python & Virtual Environments
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+wheels/
+
+# Testing & Linters
+.pytest_cache/
+.hypothesis/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Benchmark run logs & data outputs
+outputs/
+runs/
+*.log
+ENV_MANIFEST.json
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+[Dd]esktop.ini
+*.swp

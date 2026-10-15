@@ -1,0 +1,9 @@
+experiment: E8
+name: adaptive_vs_uniform_allocation
+pilot_shots: 16
+floor: 1.0e-4
+min_prod: 8
+total_shots_grid: [10000, 25000, 50000, 100000]
+reps: 100
+split_seeds: [7, 17]
+init_seeds: [0, 1]

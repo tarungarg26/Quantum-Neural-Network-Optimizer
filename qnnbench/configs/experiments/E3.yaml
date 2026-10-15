@@ -1,0 +1,7 @@
+experiment: E3
+name: analytic_five_optimisers
+updates: 80
+split_seeds: [7, 17, 27, 37, 47]
+init_seeds: [0, 1, 2]
+optimisers: [gd, momentum, adam, spsa, qng]
+checkpoint_interval: 5

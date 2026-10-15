@@ -1,0 +1,7 @@
+experiment: E6
+name: trainability_scaling
+widths: [2, 4, 6, 8, 10, 12]
+layers: 2
+observables: [Z0, parity]
+n_samples: 200
+seed: 777

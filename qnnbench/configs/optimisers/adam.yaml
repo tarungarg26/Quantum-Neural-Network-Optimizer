@@ -1,0 +1,6 @@
+optimiser:
+  name: adam
+  lr: 0.03
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1e-8

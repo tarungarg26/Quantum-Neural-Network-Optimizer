@@ -1,0 +1,67 @@
+_hash: 31e11fafc0a19648ff90e58ce72bb41d8d710dae6f34c32b6829b2823e94185b
+circuit:
+  encoding: angle_RY
+  entangler: cnot_ring
+  layers: 2
+  n_qubits: 4
+  readout: Z0
+  rot:
+  - RY
+  - RZ
+init:
+  b: 0.0
+  paired_across_optimisers: true
+  theta: uniform_0_2pi
+model:
+  loss: mse_pm1
+  n_gate_params: 16
+  n_total_params: 17
+  param_shape:
+  - 2
+  - 4
+  - 2
+  score: <Z0> + b
+optimiser:
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1e-8
+  lr: 0.03
+  name: adam
+replication:
+  init_seeds:
+  - 0
+  - 1
+  - 2
+  runs_per_config: 15
+  split_seeds:
+  - 7
+  - 17
+  - 27
+  - 37
+  - 47
+splits:
+  historical:
+    seed: 7
+    test: 0.3
+    train: 0.7
+  main:
+    expected_counts:
+    - 30
+    - 30
+    - 10
+    - 10
+    - 10
+    - 10
+    stratified: true
+    test: 0.2
+    train: 0.6
+    val: 0.2
+task:
+  classes:
+  - versicolor
+  - virginica
+  dataset: iris
+  labels:
+    versicolor: -1
+    virginica: 1
+  n_samples: 100

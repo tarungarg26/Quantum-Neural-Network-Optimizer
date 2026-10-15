@@ -1,0 +1,10 @@
+experiment: E4
+name: equal_shot_ranking
+budgets: [100000, 500000, 1000000, 5000000]
+shots_per_circuit: [32, 128, 512]
+split_seeds: [7, 17, 27, 37, 47]
+init_seeds: [0, 1, 2]
+optimisers: [gd, momentum, adam, spsa, qng]
+batch_size: 10
+monitoring_ratio: 0.2
+checkpoint_percent: 10

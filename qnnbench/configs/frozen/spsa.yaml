@@ -1,0 +1,68 @@
+_hash: ca9b7959d0682194f11fc8fa3b51551b3e04bd3b91b1959b48cd894376292ea6
+circuit:
+  encoding: angle_RY
+  entangler: cnot_ring
+  layers: 2
+  n_qubits: 4
+  readout: Z0
+  rot:
+  - RY
+  - RZ
+init:
+  b: 0.0
+  paired_across_optimisers: true
+  theta: uniform_0_2pi
+model:
+  loss: mse_pm1
+  n_gate_params: 16
+  n_total_params: 17
+  param_shape:
+  - 2
+  - 4
+  - 2
+  score: <Z0> + b
+optimiser:
+  A: 10
+  a: 0.5
+  alpha: 0.602
+  c: 0.15
+  gamma: 0.101
+  name: spsa
+replication:
+  init_seeds:
+  - 0
+  - 1
+  - 2
+  runs_per_config: 15
+  split_seeds:
+  - 7
+  - 17
+  - 27
+  - 37
+  - 47
+splits:
+  historical:
+    seed: 7
+    test: 0.3
+    train: 0.7
+  main:
+    expected_counts:
+    - 30
+    - 30
+    - 10
+    - 10
+    - 10
+    - 10
+    stratified: true
+    test: 0.2
+    train: 0.6
+    val: 0.2
+task:
+  classes:
+  - versicolor
+  - virginica
+  dataset: iris
+  labels:
+    versicolor: -1
+    virginica: 1
+  n_samples: 100

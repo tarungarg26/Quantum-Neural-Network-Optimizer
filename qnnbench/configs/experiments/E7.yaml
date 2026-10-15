@@ -1,0 +1,7 @@
+experiment: E7
+name: qng_overhead_and_geometry
+dampings: [0.001, 0.01, 0.05]
+metric_inputs: [1, 4, 8]
+split_seeds: [7, 17]
+init_seeds: [0, 1]
+updates: 30

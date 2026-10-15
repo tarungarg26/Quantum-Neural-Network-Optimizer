@@ -1,0 +1,5 @@
+experiment: E1
+name: two_term_psr_correctness
+n_samples: 200
+seed: 42
+tol: 1.0e-10

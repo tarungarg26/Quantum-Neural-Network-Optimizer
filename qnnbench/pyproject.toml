@@ -1,0 +1,29 @@
+[project]
+name = "qnnbench"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Tarun Garg", email = "tarun.garg26022005@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "hypothesis>=6.169.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+    "pennylane>=0.45.1",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "pyyaml>=6.0.3",
+    "ruff>=0.17.0",
+    "scikit-learn>=1.9.1",
+    "tabulate>=0.10.0",
+]
+
+[project.scripts]
+qnnbench = "qnnbench:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"

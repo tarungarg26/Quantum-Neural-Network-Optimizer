@@ -1,0 +1,7 @@
+optimiser:
+  name: spsa
+  a: 0.5
+  c: 0.15
+  A: 10
+  alpha: 0.602
+  gamma: 0.101

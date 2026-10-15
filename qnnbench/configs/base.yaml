@@ -1,0 +1,44 @@
+task:
+  dataset: iris
+  classes: [versicolor, virginica]
+  labels:
+    versicolor: -1
+    virginica: 1
+  n_samples: 100
+
+circuit:
+  n_qubits: 4
+  encoding: angle_RY
+  layers: 2
+  rot: [RY, RZ]
+  entangler: cnot_ring
+  readout: Z0
+
+model:
+  score: "<Z0> + b"
+  loss: mse_pm1
+  param_shape: [2, 4, 2]
+  n_gate_params: 16
+  n_total_params: 17
+
+init:
+  theta: uniform_0_2pi
+  b: 0.0
+  paired_across_optimisers: true
+
+splits:
+  main:
+    train: 0.6
+    val: 0.2
+    test: 0.2
+    stratified: true
+    expected_counts: [30, 30, 10, 10, 10, 10]
+  historical:
+    train: 0.7
+    test: 0.3
+    seed: 7
+
+replication:
+  split_seeds: [7, 17, 27, 37, 47]
+  init_seeds: [0, 1, 2]
+  runs_per_config: 15

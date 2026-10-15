@@ -1,0 +1,5 @@
+optimiser:
+  name: qng
+  lr: 0.1
+  damping: 0.01
+  metric_inputs: 8
